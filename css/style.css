@@ -1,0 +1,185 @@
+/* General Reset and Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Raleway', sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    transition: opacity 0.3s ease-in-out; /* For fade transitions */
+  }
+  
+  /* Smooth Fade-Out Class (used in JS) */
+  .fade-out {
+    opacity: 0;
+  }
+  
+  /* NAVBAR */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #222;
+  }
+  
+  .navbar .logo {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+  }
+  
+  .nav-links li a:hover {
+    color: #ff9800; /* Accent color on hover */
+  }
+  
+  .nav-links li a.active {
+    color: #ff9800;
+  }
+  
+  /* HERO SECTION */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left) */
+    justify-content: center; /* Keep horizontal centering if desired */
+    height: 80vh;
+    color: #000000;
+    text-align: left; /* Align text within elements to the left */
+    padding: 2rem;
+}
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+  }
+  
+  .hero .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #ff9800;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  
+  .hero .btn:hover {
+    background-color: #e68900;
+  }
+
+  .circular-image {
+    width: 450px; /* Adjust width as needed */
+    height: 450px; /* Adjust height as needed */
+    border-radius: 50%; /* Creates the circular shape */
+    object-fit: cover; /* Ensures image fills the circle */
+    position: absolute; /* Positions the image on the side */
+    top: 50%; /* Centers the image vertically */
+    transform: translateY(-50%); /* Adjusts vertical positioning (optional) */
+    /* Adjust horizontal positioning (optional): */
+    /* or */
+    right: 100px; /* Positions image on the right side */
+  }
+  
+  /* MAIN CONTENT AREA */
+  .content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+  
+  .content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ff9800;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* TIMELINE */
+  .timeline {
+    margin-top: 1rem;
+  }
+  
+  .timeline-item {
+    margin-bottom: 2rem;
+  }
+  
+  .timeline-item h3 {
+    font-size: 1.5rem;
+    color: #ff9800;
+  }
+  
+  .date {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #666;
+  }
+  
+  /* PROJECTS */
+  .projects-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 1.5rem;
+  }
+  
+  .project-card {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits the parent text color */
+    display: block; /* Makes the whole card clickable */
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-card h3 {
+    margin-bottom: 0.5rem;
+    color: #ff9800;
+  }
+  
+  .project-card p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* FOOTER */
+  footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+  }
+  
