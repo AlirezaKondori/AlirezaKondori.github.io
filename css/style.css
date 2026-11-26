@@ -220,6 +220,39 @@ h2 {
 .earlier a:hover { color: var(--accent); }
 .earlier span { color: var(--ink-2); font-size: 15px; }
 
+/* ---------- For businesses ---------- */
+.services-intro .lede { margin-top: 0; margin-bottom: 32px; }
+.services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.service {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 22px;
+}
+.service h3 { font-family: var(--serif); font-size: 26px; line-height: 1.15; margin-bottom: 8px; }
+.service p { color: var(--ink-2); font-size: 15px; }
+
+.steps {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+}
+.steps li { display: flex; gap: 14px; align-items: flex-start; padding-top: 8px; }
+.step-n {
+  flex: none; width: 30px; height: 30px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-family: var(--mono); font-size: 13px;
+  background: var(--accent-soft); color: var(--accent);
+}
+.steps strong { display: block; font-size: 16px; margin-bottom: 2px; }
+.steps span:not(.step-n) { color: var(--ink-2); font-size: 15px; }
+
+.pilot {
+  margin-top: 48px; padding: 32px; border-radius: var(--radius);
+  background: var(--accent-soft);
+  display: flex; align-items: center; justify-content: space-between; gap: 32px;
+}
+.pilot h3 { font-family: var(--serif); font-size: 32px; line-height: 1.1; margin-bottom: 10px; }
+.pilot p:not(.project-label) { color: var(--ink-2); max-width: 34em; }
+.pilot .btn { flex: none; }
+
 /* ---------- Skills ---------- */
 .skills-grid {
   display: grid; grid-template-columns: repeat(3, 1fr);
@@ -260,7 +293,8 @@ h2 {
   .hero { grid-template-columns: 1fr; gap: 36px; padding-top: 48px; }
   .hero-photo { justify-self: start; max-width: 220px; order: -1; }
   .job { grid-template-columns: 1fr; gap: 8px; }
-  .project-grid, .skills-grid { grid-template-columns: 1fr 1fr; }
+  .project-grid, .skills-grid, .services-grid, .steps { grid-template-columns: 1fr 1fr; }
+  .pilot { flex-direction: column; align-items: flex-start; }
   .trajectory { grid-template-columns: 1fr 1fr; }
   .trajectory li:nth-child(3) { border-left: 0; padding-left: 0; }
   .trajectory li:nth-child(n+3) { border-top: 1px solid var(--line); }
@@ -268,7 +302,8 @@ h2 {
 @media (max-width: 600px) {
   .wrap, .nav-inner { padding-left: 16px; padding-right: 16px; }
   .nav-links a:not([href="#contact"]) { display: none; }
-  .project-grid, .skills-grid { grid-template-columns: 1fr; }
+  .project-grid, .skills-grid, .services-grid, .steps { grid-template-columns: 1fr; }
+  .pilot { padding: 24px; }
   .project-feature { grid-column: auto; }
   .earlier li { flex-direction: column; gap: 2px; }
   .section { padding-top: 80px; }
